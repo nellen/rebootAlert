@@ -1,0 +1,6 @@
+{
+Description = "Informing admin by mail about a server (re-)boot";
+Provides = ("RebootAlert");
+Requires = ("Network");
+OrderPreference = "None";
+}

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Send a mail when the server (re-)booted or restarted
+
+. /etc/rc.common
+
+StartService ()
+{
+sleep 10
+ConsoleMessage "Informing admin about server boot"
+echo  "The server [ServerNAME] started. If need be, control logs and act." | mail -s "[ServerNAME] server reboot alert" recipient@domain.com -c i-am-in-cc@domain.com
+}
+
+StopService ()
+{
+return 0
+}
+
+StopService ()
+{
+return 0
+}
+
+RestartService ()
+{
+return 0
+}
+
+RunService "$1"
